@@ -24,8 +24,5 @@ jobs:
             --document-name "AWS-RunShellScript" \
             --comment "Deploy Python App" \
             --parameters commands='[
-              "cd /home/ubuntu/hello-ci-cd",
-              "git pull",
-              "sudo systemctl restart hello-world-8000",
-              "sudo systemctl status hello-world-8000"
+              "cd /home/ubuntu/hello-ci-cd && git pull && sudo systemctl restart hello-world-8000"
             ]'
